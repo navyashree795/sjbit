@@ -1,0 +1,108 @@
+:root {
+  /* Default Theme (Standard) */
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --primary-color: #3b82f6;
+  --secondary-color: #e2e8f0;
+  --font-family: 'Inter', system-ui, sans-serif;
+  --line-height: 1.6;
+  --letter-spacing: normal;
+  --container-bg: #ffffff;
+  --border-radius: 12px;
+}
+
+/* Adaptive Theme: Dyslexia */
+[data-theme="Dyslexia"] {
+  --bg-color: #fdf6e3; /* Warm, low-contrast background */
+  --text-color: #1a1a1a; /* Dark gray, not pure black */
+  --primary-color: #2563eb;
+  --font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif; /* Specialized font */
+  --line-height: 2.0; /* Increased line height */
+  --letter-spacing: 0.1em; /* Increased letter spacing */
+}
+
+/* Adaptive Theme: ADHD */
+[data-theme="ADHD"] {
+  --bg-color: #eff6ff; /* Calming blue tint */
+  --text-color: #0f172a;
+  --primary-color: #10b981; /* Highlighting green for rewards */
+  --font-family: 'Nunito', sans-serif;
+  --border-radius: 24px; /* Bubbly, friendly borders */
+}
+
+/* Adaptive Theme: Autism */
+[data-theme="Autism"] {
+  --bg-color: #ffffff; /* Clean, predictable */
+  --text-color: #333333;
+  --primary-color: #6366f1;
+  --font-family: 'Roboto', sans-serif;
+  --border-radius: 4px; /* Sharp, structured, literal */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  transition: all 0.3s ease;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Global Utility Classes */
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.card {
+  background-color: var(--container-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--container-bg);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: var(--primary-color);
+}
