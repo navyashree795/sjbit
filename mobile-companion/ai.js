@@ -1,11 +1,10 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// Replace with actual API Key or use environment variables
-const genAI = new GoogleGenerativeAI("YOUR_GEMINI_API_KEY");
+const genAI = new GoogleGenerativeAI("AIzaSyBLS15IzfiNW5m_Ua4JadV_8C9mLaOxuHI");
 
 export const generateAssessment = async (userInput) => {
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const prompt = `You are an AI analyzing a child's learning style based on their response. 
     Categorize their likely learning profile into exactly one of these three: Dyslexia, ADHD, Autism.
     If uncertain, default to ADHD.
